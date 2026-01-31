@@ -1,5 +1,5 @@
 # MLC-ML Update Synopsis
-
+ 
 ## Overview
 This update introduces a deeper neural network architecture, improves training stability through determinism, and aligns runtime code with configuration settings. The changes are focused on **model capacity**, **reproducibility**, and **regularization**.
 
