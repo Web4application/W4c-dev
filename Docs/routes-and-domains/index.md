@@ -10,6 +10,7 @@ source_url:
   md: https://developers.cloudflare.com/workers/configuration/routing/index.md
 ---
 
+
 To allow a Worker to receive inbound HTTP requests, you must connect it to an external endpoint such that it can be accessed by the Internet.
 
 There are three types of routes:
