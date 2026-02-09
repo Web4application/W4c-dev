@@ -1,0 +1,11 @@
+xcode-select -s /Applications/Xcode-beta.app
+xcodebuild -runFirstLaunch
+xcodebuild -importPlatform "~/Downloads/webOS 9 beta Simulator Runtime.dmg"
+# Install Wrangler CLI
+npm install -g wrangler
+# Login to Cloudflare account from CLI
+wrangler login
+# Run your build command
+npm run build
+# Create new deployment
+npx wrangler pages publish dist/release
