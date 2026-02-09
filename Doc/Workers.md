@@ -1,5 +1,5 @@
 ---
-title: workers.dev · Cloudflare Workers docs
+title: workers.dev
 description: Cloudflare Workers accounts come with a workers.dev subdomain that
   is configurable in the Cloudflare dashboard. Your workers.dev subdomain allows
   you getting started quickly by deploying Workers without first onboarding your
