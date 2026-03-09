@@ -1,5 +1,5 @@
 diff --git a/mlc/model.py b/mlc/model.py
-index 2a4b6c1..9f3e8aa 100644
+index 2a4b6c1..9f3e8aa 100644 
 --- a/mlc/model.py
 +++ b/mlc/model.py
 @@ -1,12 +1,22 @@
