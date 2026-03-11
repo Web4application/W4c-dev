@@ -1,0 +1,12 @@
+provider: virtualbox
+folders:
+   - map: ~/code/project1
+     to: /home/vagrant/project1
+sites:
+   - map: homestead.test
+     to: /home/vagrant/project1/public
+services:
+   - enabled:
+       - "postgresql"
+   - disabled:
+       - "mysql"
