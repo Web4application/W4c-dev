@@ -1,4 +1,4 @@
-import Foundation
+import Foundation 
 
 // Make sure Transcript model exists (id: UUID, text, language, date, gptSummary optional)
 final class TranscriptStorage {
