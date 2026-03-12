@@ -46,7 +46,6 @@ __all__ = ['HtmlPhpLexer', 'XmlPhpLexer', 'CssPhpLexer',
            'HandlebarsHtmlLexer', 'YamlJinjaLexer', 'LiquidLexer',
            'TwigLexer', 'TwigHtmlLexer', 'Angular2Lexer', 'Angular2HtmlLexer']
 
-
 class ErbLexer(Lexer):
     """
     Generic `ERB <http://ruby-doc.org/core/classes/ERB.html>`_ (Ruby Templating)
