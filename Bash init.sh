@@ -6,3 +6,4 @@ git checkout release
 # Initialize the Homestead configuration
 bash init.sh # For macOS/Linux
 init.bat # For Windows
+npx wrangler deploy
