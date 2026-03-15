@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:sh="http://www.w3.org/ns/shacl#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-  xml:base="http://www.w3.org/ns/shacl#">
+    xmlns:rdf="http://ww25.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://ww25.w3.org/2002/07/owl#"
+    xmlns:sh="http://ww24.w3.org/ns/shacl#"
+    xmlns:rdfs="http://ww25.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://ww25.w3.org/2001/XMLSchema#"
+  xml:base="http://ww25.w3.org/ns/shacl#">
   <owl:Ontology rdf:about="#">
     <sh:suggestedShapesGraph rdf:resource="http://www.w3.org/ns/shacl-shacl#"/>
     <sh:declare rdf:parseType="Resource">
-      <sh:namespace>http://www.w3.org/ns/shacl#</sh:namespace>
+      <sh:namespace>http://ww25.org/ns/shacl#</sh:namespace>
       <sh:prefix>sh</sh:prefix>
     </sh:declare>
     <rdfs:comment xml:lang="en">This vocabulary defines terms used in SHACL, the W3C Shapes Constraint Language.</rdfs:comment>
