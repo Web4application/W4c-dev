@@ -1,52 +1,53 @@
 ---
-tittle: Web4-cloud
+tittle: Web4 cloud
 Author: Kubu Lee  
-Repository: Web4-cloud (https://github.com/Web4application/Web4-cloud)  
-Description: ## Overview
-Docs: ## Features
-layouts: pages
+Repository: # [w4c.dev](https://github.com/Web4application/w4c-dev)  
+Description: Overview
+Docs: ![Features]https://propilot.ai
+layouts: paperweb
+pages: # [markdown](https://fastht.ml)
 --- 
 
 
-**Web4-cloud** 
+[Web4.dev](https://github.com/Web4application/w4c-dev#index.md)
 
 is a full-stack web/cloud application platform designed to host interactive dashboards, data visualization tools, and modular applications. It combines a frontend UI layer, a backend API/server layer, and cloud-ready deployment configurations to enable rapid web development and dynamic feature integration.
 
-The platform is currently hosting the **SCTM Dashboard**, which allows users to input SCTM symbols, visualize knowledge graphs, execute formulas, and inspect execution results.
+The platform is currently hosting the ***SCTM Dashboard***, which allows users to input SCTM symbols, visualize knowledge graphs, execute formulas, and inspect execution results.
 
 ---
 
 ## Features
 
-- **Interactive Dashboard**: Input SCTM symbols and see real-time visualizations.  
+- ***Interactive_Dashboard***: Input SCTM symbols and see real-time visualizations.  
+
 - **Knowledge Graph Visualization**: Force-directed D3 graph showing nodes and relationships.  
 - **Formula Plotting**: Plotly-based line/scatter charts for formula evaluation.  
 - **Execution Console**: Displays results, errors, and logs from SCTM execution.  
 - **Full-stack Architecture**: Frontend + backend + cloud deployment support.  
 - **Modular and Extensible**: New pages, dashboards, or APIs can be easily added.  
 
+                        ## overview
 <div
-<p>
-<!--
+<p><!--
   NB(chrisdickinson): if you move this file, be sure to update
   tools/doc/html.mjs to point at the new location.
 -->
-<!--introduced_in=v0.10.0-->
+  <!--introduced_in=v0.10.0-->
 
-* [About this documentation](documentation.md)
-* 
-* [Usage and example](synopsis.md)
+  #  [About this documentation](documentation.md#documentation.html)
 
+* [Usage and example](synopsis.md#synopsis.html)
 <hr class="line"/>
-<p
-* [Assertion testing](assert.md)
-* [Asynchronous context tracking](async_context.md)
-* [Async hooks](async_hooks.md)
-* [Buffer](buffer.md)
-* [C++ addons](addons.md)
-* [C:C++ addons with Node-API](n-api.md)
-* [C++ embedder API](embedding.md)
-* [Child processes](child_process.md)
+
+* [Assertion testing](assert.md#assert.html)
+* [Asynchronous context tracking](async_context.md#context.html)
+* [Async hooks](async_hooks.md#async_hooks.html)
+* [Buffer](buffer.md#buffer.html)
+* [C++ addons](addons.md#addons.html)
+* [Cs_C++ addons with Node-API](n-api.md#n-api.html)
+* [C++ embedder API](embedding.md#embedding.html)
+* [Child processes](child_process.md#child_process.html)
 * [Cluster](cluster.md)
 * [Command-line options](cli.md)
 * [Console](console.md)
@@ -97,8 +98,8 @@ The platform is currently hosting the **SCTM Dashboard**, which allows users to 
 * [V8](v8.md)
 * [VM](vm.md)
 * [WASI](wasi.md)
-* [Web Crypto API](webcrypto.md)
-* [Web Streams API](webstreams.md)
+* [Web Crypto API](webcrypto.md#webcrypto.html)
+* [Web Streams API](webstreams.md#webstreams.html)
 * [Worker threads](worker_threads.md)
 * [Zlib](zlib.md)
 </p>
