@@ -11,7 +11,7 @@ source_url:
   md: https://developers.cloudflare.com/web4/configuration/routing/w4c-dev/index.md
 ---
 
-Cloudflare Workers accounts come with a `web4.dev` subdomain that is configurable in the Cloudflare dashboard. Your `web4.dev` subdomain allows you getting started quickly by deploying Workers without first onboarding your custom domain to Cloudflare.
+ **web4 cloud** come with a `web4` subdomain that is configurable in the Cloud dashboard. Your `web4.dev` subdomain allows you getting started quickly by deploying pages without first onboarding your custom domain to Cloudflare.
 
 It's recommended to run production Workers on a [Workers route or custom domain](https://developers.cloudflare.com/w4c-dev/configuration/routing/), rather than on your `web4.dev` subdomain. Your `web4.dev` subdomain is treated as a [wen4.dev](https://www.cloudflare.com/plans/) and is intended for personal or hobby projects that aren't business-critical.
 
