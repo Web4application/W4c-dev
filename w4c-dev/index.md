@@ -1,6 +1,10 @@
 ---
 web4
 ---
+```esm.sh
+import Vue from "https://esm.sh/vue@3.2.37";
+```
+
 ```html
 <html lang="en" class="antialiased"><head>
     <meta charset="UTF-8">
