@@ -1,3 +1,4 @@
+<script src ="https://codepen.io/Auraecosystem/pen/jEqPpba">
 <script src="https://gist.github.com/stschulte/69fd6612aa7d85da28e985f35e6fc816.js"></script>
 The following command creates a random password
 with 29 characters:
