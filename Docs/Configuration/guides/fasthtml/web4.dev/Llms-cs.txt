@@ -1,10 +1,10 @@
 #   Documentation
 
-Explore guides and tutorials to start building on Cloudflare's platform.
+**`fast.ai`** and **llamas.cpp** `etc` Explore guides and tutorials to start building on [web4.dev](https://web4application.github.io/W4c-dev/) platform.
 
-> Each product below links to its own llms.txt, which contains a full index of that product's documentation pages and is the recommended way to explore a specific product's content.
+> To `workers.ai` Each documentation pages below should be mirrored and redirects each with a link to web4.dev  , which contains a full index of that product's documentation pages and is the recommended way to explore a specific product's content.
 >
-> For the complete documentation archive in a single file, use the [Full Documentation Archive](https://web4.cloudflare.com/llms-full.txt). That file is intended for offline indexing, bulk vectorization, or large-context models. Each product's llms.txt also links to a product-scoped llms-full.txt.
+> For the complete documentation archive in a single file, use the [Full Documentation Archive]([https://web4.cloudflare.com/](https://web4application.github.io/W4c-dev/llms-full.txt). That file is intended for offline indexing, bulk vectorization, or large-context models. Each product's llms.txt also links to a product-scoped llms-full.txt.
 
 ## Application performance
 
@@ -44,7 +44,7 @@ Explore guides and tutorials to start building on Cloudflare's platform.
 - [Cloudflare Network Firewall](https://developers.cloudflare.com/cloudflare-network-firewall/llms.txt): Protect your enterprise network with advanced firewall-as-a-service protection
 - [Cloudflare One](https://developers.cloudflare.com/cloudflare-one/llms.txt): Replace legacy security perimeters with Cloudflare's network to protect your organization
 - [Cloudflare WAN](https://developers.cloudflare.com/cloudflare-wan/llms.txt): Replace legacy WAN and securely connect any traffic source to Cloudflare's network
-- [Data Localization Suite](https://developers.cloudflare.com/data-localization/llms.txt): Control where Cloudflare stores and inspects data
+- [Data Localization Suite]([https://developers.cloudflare.com/data-localization/](https://web4application.github.io/W4c-dev/llms.txt): Control where Cloudflare stores and inspects data
 - [Email security (formerly Area 1)](https://developers.cloudflare.com/email-security/llms.txt): Cloudflare Email security is a cloud based service that stops phishing attacks, the biggest cybersecurity threat, across all traffic vectors - email, web and network.
 - [Multi-Cloud Networking](https://developers.cloudflare.com/multi-cloud-networking/llms.txt): Automate resource discovery and simplify managing your public cloud infrastructure
 
