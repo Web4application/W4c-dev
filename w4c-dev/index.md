@@ -6,7 +6,11 @@ web4
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web4: The Symbiotic Network</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/ejs@3.1.8/ejs.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/PhysicsPropsPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tslib@2.8.1/tslib.min.js"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script src="https://web4.ai/doc.conway.tech"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -273,5 +277,277 @@ web4
         </div>
     </footer>
 
+>
+ <link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-tomorrow.css" />
+ <script src="https://unpkg.com/prismjs/prism.js"></script>
 
+ <style>
+      :root {
+           --aura-glow: 0.5;
+           --aura-light: hsl(190, 100%, 65%);
+           --aura-dark: hsl(270, 100%, 70%);
+           --bg: #0d0d0d;
+           --fg: #ffffff;
+      }
+
+      * {
+           box-sizing: border-box;
+      }
+
+      body {
+           margin: 0;
+           font-family: "Segoe UI", system-ui, sans-serif;
+           background: var(--bg);
+           color: var(--fg);
+           display: flex;
+           min-height: 100vh;
+           overflow: hidden;
+      }
+
+      aside {
+           width: 260px;
+           background: rgba(20, 20, 20, 0.95);
+           border-right: 1px solid rgba(255, 255, 255, 0.1);
+           padding: 2rem 1rem;
+           position: relative;
+      }
+
+      aside h2 {
+           color: var(--aura-light);
+           font-weight: 700;
+           text-align: center;
+      }
+
+      aside nav a {
+           display: block;
+           padding: 0.7rem 1rem;
+           color: #aaa;
+           text-decoration: none;
+           border-radius: 8px;
+           margin: 0.3rem 0;
+           transition: background 0.3s, color 0.3s;
+      }
+
+      aside nav a:hover,
+      aside nav a.active {
+           background: linear-gradient(90deg, var(--aura-light), var(--aura-dark));
+           color: white;
+      }
+
+      main {
+           flex: 1;
+           padding: 2rem;
+           overflow-y: auto;
+           position: relative;
+      }
+
+      .aura-title {
+           font-size: 2.2rem;
+           background: linear-gradient(90deg, var(--aura-light), var(--aura-dark));
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+           text-shadow: 0 0 20px var(--aura-dark);
+      }
+
+      pre {
+           background: rgba(255, 255, 255, 0.05);
+           border-radius: 8px;
+           padding: 1rem;
+           overflow-x: auto;
+      }
+
+      /* Voice button */
+      #voice-btn {
+           position: fixed;
+           bottom: 1.5rem;
+           right: 1.5rem;
+           width: 65px;
+           height: 65px;
+           border-radius: 50%;
+           border: none;
+           background: linear-gradient(135deg, var(--aura-light), var(--aura-dark));
+           box-shadow: 0 0 20px var(--aura-dark);
+           cursor: pointer;
+           color: white;
+           font-size: 1.5rem;
+           transition: transform 0.2s ease;
+      }
+
+      #voice-btn.listening {
+           animation: pulse 1.2s infinite;
+      }
+
+      @keyframes pulse {
+           0% {
+                transform: scale(1);
+                box-shadow: 0 0 15px var(--aura-light);
+           }
+
+           50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 25px var(--aura-dark);
+           }
+
+           100% {
+                transform: scale(1);
+                box-shadow: 0 0 15px var(--aura-light);
+           }
+      }
+
+      footer {
+           text-align: center;
+           opacity: 0.5;
+           margin-top: 2rem;
+           font-size: 0.9rem;
+      }
+ </style>
+Aura++
+
+Introduction Voice Integration API Reference Examples
+ <main id="content">
+      <h1 class="aura-title">Aura++ Documentation</h1>
+      <p>Welcome to <strong>Aura++</strong> — the next evolution of voice-reactive intelligence. Speak, and the docs respond.</p>
+      <pre><code class="language-js">// Try saying "Show me voice integration"
+console.log("Hello Aura++");
+
+ <button id="voice-btn" title="Activate Voice Assistant">🎤</button>
+
+ <footer>
+      Aura++ Docs © 2025 — Built for Reactive Intelligence
+ </footer>
+
+ <script>
+      const content = document.getElementById("content");
+      const sections = {
+           intro: `
+    <h1 class="aura-title">Introduction</h1>
+    <p>Aura++ is a <b>Voice Reactive Intelligence Engine</b> that combines speech recognition, context memory, and real-time code generation.</p>
+  `,
+           voice: `
+    <h1 class="aura-title">Voice Integration</h1>
+    <p>To enable voice interactivity, Aura++ uses the <code>SpeechRecognition</code> API and Web Speech Synthesis.</p>
+    <pre><code class="language-js">const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+recognition.start();
+, api:
+
+API Reference
+
+
+Aura++ exposes a modular API for voice, emotion, and action layers.
+
+
+fetch("/api/v1/voice", { method: "POST", body: audioBlob });
+
+, examples:
+Examples
+
+
+Here’s how you can trigger a reactive event:
+
+
+aura.on("command", (cmd) => {
+
+if (cmd.includes("hello")) aura.say("Hey there, human!");
+
+});
+
+`
+};
+      function loadSection(section) {
+           content.innerHTML = sections[section] || "<p>Not found</p>";
+           Prism.highlightAll();
+           document.querySelectorAll("aside nav a").forEach(a => a.classList.remove("active"));
+           event.target.classList.add("active");
+      }
+      // Voice assistant
+      const btn = document.getElementById("voice-btn");
+      const synth = window.speechSynthesis;
+      const rec = new(window.SpeechRecognition || window.webkitSpeechRecognition)();
+      rec.continuous = false;
+      rec.lang = "en-US";
+      rec.onresult = (e) => {
+           const transcript = e.results[0][0].transcript.toLowerCase();
+           speak("You said: " + transcript);
+           if (transcript.includes("voice")) loadSection("voice");
+           else if (transcript.includes("api")) loadSection("api");
+           else if (transcript.includes("example")) loadSection("examples");
+           else if (transcript.includes("intro")) loadSection("intro");
+           else speak("Try saying: show me voice integration.");
+      };
+
+      function speak(text) {
+           synth.cancel();
+           const utter = new SpeechSynthesisUtterance(text);
+           utter.pitch = 1;
+           utter.rate = 1.1;
+           utter.voice = synth.getVoices()[0];
+           synth.speak(utter);
+      }
+      btn.onclick = () => {
+           btn.classList.add("listening");
+           rec.start();
+           speak("Listening...");
+           rec.onend = () => btn.classList.remove("listening");
+      };
+
+/* ── Sync texture for shader (main + ghost trailing blobs) ── */
+function sync() {
+  dropletBuf.fill(0);
+  const n = Math.min(drops.length, MAX_DROPLETS);
+  for (let i = 0; i < n; i++) {
+    const d = drops[i];
+    /* main blob */
+    dropletBuf[i * 4] = d.x;
+    dropletBuf[i * 4 + 1] = d.y;
+    dropletBuf[i * 4 + 2] = d.r;
+    dropletBuf[i * 4 + 3] = 1;
+
+    /* ghost trailing blob: positioned behind by softOffset,
+       smaller radius → creates a teardrop tail via metaball merge */
+    const ghostScale = 0.7;
+    const trailStr = 3.5;
+    const gi = (n + i) * 4;
+    dropletBuf[gi] = d.x - d.softOffX * trailStr;
+    dropletBuf[gi + 1] = d.y - d.softOffY * trailStr;
+    dropletBuf[gi + 2] = d.r * ghostScale;
+    dropletBuf[gi + 3] = 1;
+  }
+  dropletTex.needsUpdate = true;
+  mat.uniforms.uCount.value = n * 2;
+}
+
+/* ── Main loop ──────────────────────────────────────────── */
+let last = performance.now();
+let acc = 0;
+let paused = false;
+
+document.addEventListener("visibilitychange", () => {
+  paused = document.hidden;
+  if (!paused) last = performance.now();
+});
+
+(function loop() {
+  if (paused) {
+    requestAnimationFrame(loop);
+    return;
+  }
+  const now = performance.now();
+  const dt = Math.min(now - last, MAX_FRAME_DT_MS);
+  last = now;
+  acc += dt;
+
+  let g = 0;
+  while (acc >= FIXED_DT_MS && g < MAX_CATCHUP) {
+    fixedUpdate();
+    acc -= FIXED_DT_MS;
+    g++;
+  }
+  if (g >= MAX_CATCHUP) acc = 0;
+
+  mat.uniforms.uTime.value = now * 0.001;
+  sync();
+  renderer.render(scene, camera);
+  requestAnimationFrame(loop);
+})();
+ </script>
 </body></html>
