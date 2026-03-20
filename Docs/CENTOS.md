@@ -1,5 +1,5 @@
 ## Linux Copy One Hard Disk to Another Using dd Command
-
+`https://codepen.io/Auraecosystem/pen/jEqPpba`
 You can copy the disk in raw format using the dd command. It will copy the partition table, bootloader, data, and all partitions within this disk. For example, you can copy /dev/sda to /dev/sdb (same size) using the following dd command. Please note that the dd should be complete with no errors on screen, except output the number of records read and written. There is also GNU/rescue command, which is far more robust than the standard dd command provided with Linux. Let us see how to copy one hard disk to another in Linux using the dd, dcfldd, and ddresuce commands.
 Tutorial details
 Difficulty level	Advanced
