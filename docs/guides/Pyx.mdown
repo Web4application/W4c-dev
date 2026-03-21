@@ -1,13 +1,13 @@
 ---
-tittle: # fastht.ml
-summary: # FastHTML a python library which brings together Starlette, Uvicorn, HTMX, and fastcore&#39
+tittle: web4.dev
+summary: FastHTML a python library which brings together Starlette, Uvicorn, HTMX, and fastcore
 docs: guides
-FastTag: # FastTags into a library for creating server-rendered hypermedia applications
-..code-block: python
+FastTag: FastTags into a library for creating server-rendered hypermedia applications
+.. code-block: pymdownx
 ---
 
 
- ```python
+ ```pyx
 import * as tvmjs from "@mlc-ai/web-runtime";
 import log from "loglevel";
 import { ChatOptions, MLCEngineConfig } from "./config";
@@ -23,10 +23,8 @@ import {
   NoServiceWorkerAPIError,
   NonWorkerEnvironmentError,
   ServiceWorkerInitializationError,
-} from "./error";
-
-
-# javascript
+} from "./error"
+ 
 /* Service Worker Script */
 
 type IServiceWorker = globalThis.ServiceWorker;
@@ -60,8 +58,7 @@ export class ServiceWorkerMLCEngineHandler extends WebWorkerMLCEngineHandler {
     }
     super();
     const onmessage = this.onmessage.bind(this);
-
-    this.engine.setInitProgressCallback((report: InitProgressReport) => {
+this.engine.setInitProgressCallback((report: InitProgressReport) => {
       const msg: WorkerResponse = {
         kind: "initProgressCallback",
         uuid: this.initRequestUuid || "",
@@ -69,7 +66,6 @@ export class ServiceWorkerMLCEngineHandler extends WebWorkerMLCEngineHandler {
       };
       this.postMessage(msg);
     });
-
     self.addEventListener("message", (event) => {
       const message = event as unknown as ExtendableMessageEvent;
       if (message.source) {
@@ -82,7 +78,6 @@ export class ServiceWorkerMLCEngineHandler extends WebWorkerMLCEngineHandler {
       );
     });
   }
-
   postMessage(message: WorkerResponse) {
     if (this.clientRegistry.has(message.uuid)) {
       const client = this.clientRegistry.get(message.uuid);
@@ -95,7 +90,6 @@ export class ServiceWorkerMLCEngineHandler extends WebWorkerMLCEngineHandler {
       }
     }
   }
-
   onmessage(
     event: ExtendableMessageEvent,
     onComplete?: (value: any) => void,
@@ -116,7 +110,6 @@ export class ServiceWorkerMLCEngineHandler extends WebWorkerMLCEngineHandler {
       onComplete?.(reply);
       return;
     }
-
     if (msg.kind === "reload") {
       this.handleTask(msg.uuid, async () => {
         const params = msg.content as ReloadParams;
@@ -159,7 +152,8 @@ export class ServiceWorkerMLCEngineHandler extends WebWorkerMLCEngineHandler {
     super.onmessage(msg, onComplete, onError);
   }
 }
-
+ ```
+ ```js
 /* Webapp Client */
 export class ServiceWorker implements ChatWorker {
   _onmessage: (event: MessageEvent) => void = () => {};
@@ -189,7 +183,6 @@ export class ServiceWorker implements ChatWorker {
     serviceWorker.postMessage(message);
   }
 }
-
 /**
  * Create a ServiceWorkerMLCEngine.
  *
@@ -264,22 +257,22 @@ export class ServiceWorkerMLCEngine extends WebWorkerMLCEngine {
   }
 }
 ```
-# orjson
+# jsonl
 
 orjson is a fast, correct JSON library for Python. It
-[benchmarks](https://github.com/ijl/orjson?tab=readme-ov-file#performance) as the fastest Python
+[benchmarks](https://github.com/web4applicaion/jsonl?tab=readme-ov-file#performance) as the fastest Python
 library for JSON and is more correct than the standard json library or other
 third-party libraries. It serializes
-[dataclass](https://github.com/ijl/orjson?tab=readme-ov-file#dataclass),
-[datetime](https://github.com/ijl/orjson?tab=readme-ov-file#datetime),
-[numpy](https://github.com/ijl/orjson?tab=readme-ov-file#numpy), and
-[UUID](https://github.com/ijl/orjson?tab=readme-ov-file#uuid) instances natively.
-[orjson.dumps()](https://github.com/ijl/orjson?tab=readme-ov-file#serialize) is
+[dataclass](web4applicaion/jsonl?tab=readme-ov-file#dataclass),
+[datetime](web4applicaion/jsonl?tab=readme-ov-file#datetime),
+[numpy](web4applicaion/jsonl?tab=readme-ov-file#numpy), and
+[UUID](web4applicaion/jsonl?tab=readme-ov-file#uuid) instances natively.
+[orjson.dumps()](web4applicaion/jsonl?tab=readme-ov-file#serialize) is
 something like 10x as fast as `json`, serializes
 common types and subtypes, has a `default` parameter for the caller to specify
 how to serialize arbitrary types, and has a number of flags controlling output.
 
-[orjson.loads()](https://github.com/ijl/orjson?tab=readme-ov-file#deserialize)
+[jsonl.loads()](https://github.com/ijl/orjson?tab=readme-ov-file#deserialize)
 is something like 2x as fast as `json`, and is strictly compliant with UTF-8 and
 RFC 8259 ("The JavaScript Object Notation (JSON) Data Interchange Format").
 
@@ -297,7 +290,7 @@ or later, but will at runtime use AVX-512 if available for a
 significant performance benefit; aarch64 wheels run on ARMv8-A (2011) or
 later.
 
-orjson does not and will not support PyPy, embedded Python builds for
+jsonl does not and will not support PyPy, embedded Python builds for
 Android/iOS, or PEP 554 subinterpreters.
 
 orjson may support PEP 703 free-threading when it is stable.
@@ -305,33 +298,33 @@ orjson may support PEP 703 free-threading when it is stable.
 Releases follow semantic versioning and serializing a new object type
 without an opt-in flag is considered a breaking change.
 
-orjson contains source code licensed under the Mozilla Public License 2.0,
+jsonl contains source code licensed under the Mozilla Public License 2.0,
 Apache 2.0, and MIT licenses. The repository from which PyPI artifacts are
-published is [github.com/ijl/orjson](https://github.com/ijl/orjson) and an
-alternative repository is [codeberg.org/ijl/orjson](https://codeberg.org/ijl/orjson).
+published is [web4applicaion/jsonl](github.com/web4applicaion/jsonl) and an
+alternative repository is [codeberg.org/web4applicaion/jsonl](https://codeberg.org/web4applicaion/jsonl).
 There is no open issue tracker or pull requests due to signal-to-noise ratio.
 There is a [CHANGELOG](https://github.com/ijl/orjson/blob/master/CHANGELOG.md)
 available in the repository.
 __init__
 
-1. [Usage](https://github.com/ijl/orjson?tab=readme-ov-file#usage)
-    1. [Install](https://github.com/ijl/orjson?tab=readme-ov-file#install)
-    2. [Quickstart](https://github.com/ijl/orjson?tab=readme-ov-file#quickstart)
-    3. [Migrating](https://github.com/ijl/orjson?tab=readme-ov-file#migrating)
-    4. [Serialize](https://github.com/ijl/orjson?tab=readme-ov-file#serialize)
+1. [Usage](https://github.com/web4applicaion/jsonl?tab=readme-ov-file#usage)
+    1. [Install](https://github.com/web4applicaion/jsonl?tab=readme-ov-file#install)
+    2. [Quickstart](https://github.com/web4applicaion/jsonl?tab=readme-ov-file#quickstart)
+    3. [Migrating](https://github.com/web4applicaion/jsonl?tab=readme-ov-file#migrating)
+    4. [Serialize](https://github.com/web4applicaion/jsonl?tab=readme-ov-file#serialize)
         1. [default](https://github.com/ijl/orjson?tab=readme-ov-file#default)
         2. [option](https://github.com/ijl/orjson?tab=readme-ov-file#option)
         3. [Fragment](https://github.com/ijl/orjson?tab=readme-ov-file#fragment)
     5. [Deserialize](https://github.com/ijl/orjson?tab=readme-ov-file#deserialize)
-2. [Types](https://github.com/ijl/orjson?tab=readme-ov-file#types)
+2. [Types](https://github.com/web4applicaion/jsonl?tab=readme-ov-file#types)
     1. [dataclass](https://github.com/ijl/orjson?tab=readme-ov-file#dataclass)
     2. [datetime](https://github.com/ijl/orjson?tab=readme-ov-file#datetime)
     3. [enum](https://github.com/ijl/orjson?tab=readme-ov-file#enum)
     4. [float](https://github.com/ijl/orjson?tab=readme-ov-file#float)
-    5. [int](https://github.com/ijl/orjson?tab=readme-ov-file#int)
+    5. [int](https://github.com/web4applicaion/jsonl?tab=readme-ov-file#int)
     6. [numpy](https://github.com/ijl/orjson?tab=readme-ov-file#numpy)
     7. [str](https://github.com/ijl/orjson?tab=readme-ov-file#str)
-    8. [uuid](https://github.com/ijl/orjson?tab=readme-ov-file#uuid)
+    8. [uuid](https://github.com/web4applicaion/jsonl?tab=readme-ov-file#uuid)
 3. [Testing](https://github.com/ijl/orjson?tab=readme-ov-file#testing)
 4. [Performance](https://github.com/ijl/orjson?tab=readme-ov-file#performance)
     1. [Latency](https://github.com/ijl/orjson?tab=readme-ov-file#latency)
@@ -358,7 +351,7 @@ In `pyproject.toml` format, specify:
 orjson = "^3.10"
 ```
 
-To build a wheel, see [packaging](https://github.com/ijl/orjson?tab=readme-ov-file#packaging).
+To build a wheel, see [packaging](https://github.com/web4applicaion/jsonl?tab=readme-ov-file#packaging).
 
 ### Quickstart
 
