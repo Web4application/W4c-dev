@@ -1,14 +1,6 @@
-// vite.config.js
-export default {
-  server: {
-    host: 'web4.dev',
-    port: 80,          // or 443 with https: true
-    https: {
-      key: fs.readFileSync('web4.dev-key.pem'),
-      cert: fs.readFileSync('web4.dev.pem'),
-    },
-  },
-}
+brew install mkcert nss   # nss for Firefox if needed
+mkcert -install
+mkcert web4.dev "*.web4.dev" localhost 127.0.0.1
 cdnvm() {
     command cd "$@" || return $?
     nvm_path="$(nvm_find_up .nvmrc | command tr -d '\n')"
