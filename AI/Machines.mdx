@@ -1,8 +1,7 @@
 # MACHINES
 
 
-
-Sure! Let's expand the config.json file to include settings for general AI, predictive AI, self-aware AI (simulated), reactive AI, and machine learning. Here's how you can structure it:
+ settings for general AI, predictive AI, self-aware AI (simulated), reactive AI, and machine learning. structure it:
 
 Updated config.json with Advanced AI Settings
 
@@ -177,7 +176,7 @@ Updated config.json with Advanced AI Settings
 ```
 
 
-# Explanation of New Sections
+# Explanation of New Sections:
 
 {wrangler.toml}
 [***general.AI***](https://www.bing.com/search?form=SKPBOT&q=General%20AI/lmlm.ai)
@@ -288,12 +287,8 @@ callbacks=[checkpoint_callback, early_stopping_callback, tensorboard_callback]
 ``
 ---
 ```
-By integrating these advanced settings, you can make your project more flexible and powerful. If you have any other specific settings or functionalities in mind, feel free to ask!
-
-If your project uses a different test runner, you can still use Tox to automate testing across multiple environments. You'll just need to adjust the commands section in your tox.ini file to use your preferred test runner. Here are examples for some common test runners:
-
-Using unittest
-If you're using Python's built-in unittest framework, your tox.ini might look like this:
+integrating them Using unittest
+using Python's built-in unittest framework, your tox.ini might look like this:
 
 ```tox.ini
 [tox]
@@ -304,10 +299,11 @@ deps =
 unittest2
 commands = 
 python -m unittest discover
+```
 
 Using nose
 If you're using nose, you can configure Tox like this:
-
+```tox.ini
 [tox]
 envlist = py36, py37, py38, py39
 
@@ -316,10 +312,10 @@ deps =
 nose
 commands = 
 nosetests
-
+```
 Using pytest with Plugins
-If you're using pytest with additional plugins, you can specify them in the deps section:
-
+ using pytest with additional plugins, specifying them in the deps section:
+```tox.ini
 [tox]
 envlist = py36, py37, py38, py39
 
@@ -329,10 +325,10 @@ pytest
 pytest-cov
 commands = 
 pytest --cov=myproject
-
+```
 Using tox with coverage
 If you want to include coverage reporting with coverage.py, you can set it up like this:
-
+```tox.ini
 [tox]
 envlist = py36, py37, py38, py39
 
@@ -342,10 +338,10 @@ coverage
 commands = 
 coverage run -m unittest discover
 coverage report
-
+```
 Using pytest with tox and coverage
 For a more comprehensive setup using pytest, tox, and coverage:
-
+```tox.ini
 [tox]
 envlist = py36, py37, py38, py39
 
@@ -356,10 +352,10 @@ pytest-cov
 coverage
 commands = 
 pytest --cov=myproject
-
+```
 Custom Test Runner
 If you have a custom test runner, you can specify the command to run your tests:
-
+```tox.ini
 [tox]
 envlist = py36, py37, py38, py39
 
@@ -406,3 +402,4 @@ run: pip install tox
 •  name: Run Tox
 run: tox
 }
+```
