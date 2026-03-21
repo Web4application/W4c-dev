@@ -1,0 +1,5 @@
+web4.dev {
+    root * /path/to/your/repo/public   # or wherever index.html/php lives
+    file_server
+    # or reverse_proxy localhost:3000   # if using vite/next/etc
+}
