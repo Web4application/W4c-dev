@@ -11,3 +11,5 @@ find . -type d -iname "*local*" -print   # list suspects
 
 git add . && git commit -m "Clean up duplicate/test localhost folders"
 git push
+sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+brew install caddy   # if not installed
