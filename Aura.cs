@@ -30,7 +30,7 @@ namespace web4
         {
             using var client = new HttpClient()
             {
-                BaseAddress = new Uri("http://localhost:8181/")
+                BaseAddress = new Uri("http://127.0.0.1:3000/")
             };
 
             client.DefaultRequestHeaders
