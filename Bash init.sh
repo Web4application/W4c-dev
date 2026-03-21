@@ -12,3 +12,4 @@ npx wrangler deploy
 > mkdir docs
 > cd docs
 > doxygen.exe -g
+sudo nano /etc/hosts
