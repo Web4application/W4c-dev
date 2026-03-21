@@ -1,3 +1,14 @@
+// vite.config.js
+export default {
+  server: {
+    host: 'web4.dev',
+    port: 80,          // or 443 with https: true
+    https: {
+      key: fs.readFileSync('web4.dev-key.pem'),
+      cert: fs.readFileSync('web4.dev.pem'),
+    },
+  },
+}
 cdnvm() {
     command cd "$@" || return $?
     nvm_path="$(nvm_find_up .nvmrc | command tr -d '\n')"
