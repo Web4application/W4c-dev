@@ -1,5 +1,4 @@
-#pragma prototyped noticed
-
+# pragma prototyped noticed
 /*
  * regex(3) test harness
  *
