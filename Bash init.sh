@@ -7,3 +7,8 @@ git checkout release
 bash init.sh # For macOS/Linux
 init.bat # For Windows
 npx wrangler deploy
+> pip install sphinx_rtd_theme
+> pip install breathe
+> mkdir docs
+> cd docs
+> doxygen.exe -g
