@@ -25,6 +25,47 @@ Monorepo for prototyping **Web4** ideas: AI-enhanced web apps, serverless (Cloud
    - Caddy for custom domain: see below
 4. Add to /etc/hosts: `127.0.0.1 web4.dev`
 5. Open: https://web4.dev (use mkcert for HTTPS)
+6. 
+```ps1
+powershellExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+```bash
+uv pip compile requirements.in \
+   --universal \
+   --output-file requirements.txt
+uv init fastjsonl
+
+cd fastjsonl
+
+uv add ruff
+
+curl -LsSf https://astral.sh/uv/1.0.9/install.sh | sh
+
+
+
+
+
+
+uv run ruff check
+
+
+uv lock
+
+
+uv sync
+```
+```bash
+echo 'import requests; print(requests.get("https://astral.sh"))' > fastjsonl.py
+```
+```sh
+uv add --script example.py requests
+uv run fastjsonl.py
+
+uv python install 3.10 3.11 3.12
+uv venv
+uv pip sync requirements.txt
+wget -qO- https://astral.sh/uv/install.sh | sh
+```
 
 ## Cleanup Notes
 Removed duplicate test folders (`locallhost/`, etc.) — use `web4.dev` for local domain testing.
