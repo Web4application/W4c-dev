@@ -13,3 +13,7 @@ npx wrangler deploy
 > cd docs
 > doxygen.exe -g
 sudo nano /etc/hosts
+# Install vLLM from pip:
+pip install vllm
+# Start the vLLM server:
+vllm serve "nvidia/gpt-oss-puzzle-88B"
